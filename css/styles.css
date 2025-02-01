@@ -124,7 +124,7 @@ h6 {
 
 a {
 	color: #555;
-	text-decoration: underline;
+	/*text-decoration: underline;*/
 }
 
 a:hover {
@@ -669,7 +669,7 @@ input[type='checkbox'] {
 
 .navbar-custom .navbar-brand.logo-image img {
    /* width: 4.4375rem;*/
-	height: 1.95rem;
+	height: 2.55rem;
 }
 
 .navbar-custom .navbar-brand.logo-text {
@@ -2220,4 +2220,17 @@ div#mapLegenda {
 }
 li.media {
     align-items: center;
+}
+p.logo-text {
+    color: azure;
+    display: inline;
+	font: 700 1.5rem / 2.125rem "Open Sans", sans-serif;
+    letter-spacing: -1px;
+}
+
+span.lgtxt {
+    color: gold;
+    font: 500 1rem / 2.125rem "Open Sans", sans-serif;
+    letter-spacing: -1px;
+	margin-left: -4px;
 }
