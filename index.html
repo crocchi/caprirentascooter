@@ -474,7 +474,7 @@
                                 </li>
                             </ul>
                             <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="sign-up.html">SIGN UP</a>
+                                <a class="btn-solid-reg page-scroll" href="sign-up.html">BUY ONLINE</a>
                             </div>
                         </div>
                     </div> <!-- end of card -->
@@ -492,23 +492,28 @@
                             <div class="divider"></div>
                             <ul class="list-unstyled li-space-lg">
                                 <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Email Marketing Module</div>
+                                    <i class="fas fa-check"></i><div class="media-body">2 Helmets</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">User Control Management</div>
+                                    <i class="fas fa-check"></i><div class="media-body">Unlimited kilometres</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">List Building And Cleaning</div>
+                                    <i class="fas fa-check"></i><div class="media-body">Petrol included</div>
                                 </li>
                                 <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Collected Data Reports</div>
+                                    <i class="fas fa-check"></i><div class="media-body">Civil Liability Insurance</div>
                                 </li>
                                 <li class="media">
                                     <i class="fas fa-check"></i><div class="media-body">Planning And Evaluation</div>
                                 </li>
                             </ul>
                             <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="sign-up.html">SIGN UP</a>
+                                <a class="btn-solid-reg page-scroll" href="sign-up.html">BUY ONLINE</a>
+                                <stripe-buy-button
+  buy-button-id="buy_btn_1Qne8gAaBdowjnuNjE0LMbb4"
+  publishable-key="pk_test_51OyOcDAaBdowjnuNmIxKSM1aYiMmBaV9onb50ikftgBon6YWBJu15hvvGh9lR2hZedxPqvBwH5pJuEbUn64PL0ik00wHhSSvM6"
+>
+</stripe-buy-button>
                             </div>
                         </div>
                     </div> <!-- end of card -->
@@ -653,24 +658,14 @@
                                 <i class="fab fa-twitter fa-stack-1x"></i>
                             </a>
                         </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
-                            </a>
-                        </span>
+                     
                         <span class="fa-stack">
                             <a href="#your-link">
                                 <i class="fas fa-circle fa-stack-2x"></i>
                                 <i class="fab fa-instagram fa-stack-1x"></i>
                             </a>
                         </span>
-                        <span class="fa-stack">
-                            <a href="#your-link">
-                                <i class="fas fa-circle fa-stack-2x"></i>
-                                <i class="fab fa-linkedin-in fa-stack-1x"></i>
-                            </a>
-                        </span>
+                       
                     </div> <!-- end of col -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -750,6 +745,7 @@
     <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script async src="https://js.stripe.com/v3/buy-button.js"> </script>
     <script>
         (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
           key: "AIzaSyBU8ZGzVNM00GCy4QBdLt-rnOlkFo8hPa4",
