@@ -2177,3 +2177,47 @@ a:hover.back-to-top {
     padding-top: 4rem;
     padding-bottom: 6rem;
 }
+
+h2.h2-heading.comments {
+    text-align: center;
+    margin-bottom: 1em;
+}
+#map {
+    height: 400px; /* The height is 400 pixels */
+    width: 100%; /* The width is the width of the web page */
+}
+.basic-3 {
+    padding-top: 3rem;
+    padding-bottom: 4em;
+    background-color: #f3f7fd;
+    text-align: center;
+}
+.mapTxt {
+    padding-bottom: 1em;
+}
+div#mapLegenda {
+    padding-top: 2.5em;
+
+}
+.mediaMap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+	padding-bottom: 0.2em;
+}
+
+.point-number {
+    background: #ea4335;
+    border-radius: 50%;
+	width: 25px;
+    height: 25px;
+	color: white;
+	box-shadow: 1px 0px 1px 0px black;
+}
+li.media {
+    align-items: center;
+}

@@ -158,6 +158,13 @@
 
                                                 <div class="help-block with-errors"></div>
                                             </div>
+
+                                            <div class="form-group">
+                                                <input type="time" class="form-control-input" id="nehour" required="">
+                                                <label class="label-control" for="nehour">hours</label>    
+
+                                                <div class="help-block with-errors"></div>
+                                            </div>
                                             
                                             <div class="form-group checkbox">
                                                 <input type="checkbox" id="nterms" value="Agreed-to-Terms" required="">I'm not a Robot! <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a> 
@@ -251,7 +258,11 @@
                         </div>
                         <div class="card-body">
                             <h4 class="card-title">Best Experience</h4>
-                            <p>We can also help you make the most of your time on Capri in other ways, all at no extra cost. Not sure where to stay? We can help you find the right hotel or B&B. Not sure how to reach the island? We can tell you how to get to and from the airport and provide you with local ferry and bus timetables. Not sure where to eat? We will tell you about the bars and restaurants.</p>
+                            <p>We can also help you make the most of your time on Capri in other ways, all at no extra cost.</p>
+                            <p> <strong>Not sure where to stay?</strong> We can help you find the right hotel or B&B. </p>
+                            <p><strong>Not sure how to reach the island?</strong> We can tell you how to get to and from the airport and provide you with local ferry and bus timetables.</p>
+                            <p> <strong>Not sure where to eat?</strong> We will tell you about the bars and restaurants.</p>
+                        
                         </div>
                     </div>
                     <!-- end of card -->
@@ -294,7 +305,6 @@
             </li>
            
         </ul>
-        <p>We can also help you make the most of your time on Capri in other ways, all at no extra cost.</p>
     </div>
 
 </div>
@@ -512,7 +522,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">      
-                    
+                    <div class="above-heading">what they say about us</div>
+                    <h2 class="h2-heading comments">Our customers</h2>
                     <!-- Text Slider -->
                     <div class="slider-container">
                         <div class="swiper-container text-slider">
@@ -583,6 +594,41 @@
     </div> <!-- end of slider-2 -->
     <!-- end of testimonials -->
 
+        <!-- maps -->
+        <div id="mapss" class="basic-3">
+            <h3 class="mapTxt">Capri Map</h3>
+           
+    
+                        <!-- Video Preview -->
+                        <div class="image-container">
+                           
+                            <!--The div element for the map -->
+                            <div id="map"></div>
+
+                            <div id="mapLegenda">
+                            <ul class="list-unstyled li-space-lg">
+                                <li class="mediaMap">
+                                    <span class="point-number">1</span><div class="media-body">Grotta Azzurra</div>
+                                </li>
+                                <li class="mediaMap">
+                                    <span class="point-number">2</span><div class="media-body">Faro di Punta Carena</div>
+                                </li>
+                                <li class="mediaMap">
+                                    <span class="point-number">3</span><div class="media-body">Sentiero dei Fortini</div>
+                                </li>
+                                <li class="mediaMap">
+                                    <span class="point-number">4</span><div class="media-body">Damecuta</div>
+                                </li>
+                                <li class="mediaMap">
+                                    <span class="point-number">5</span><div class="media-body">Belvedere della Migliara</div>
+                                </li>
+                            </ul>
+                          </div>
+                        </div> <!-- end of image-container -->
+                        <!-- end of video preview -->
+     
+        </div> <!-- end of basic-3 -->
+        <!-- end of video -->
 
     <!-- Newsletter -->
     <div class="form">
@@ -700,5 +746,119 @@
     <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
+    <script>
+        (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
+          key: "AIzaSyBU8ZGzVNM00GCy4QBdLt-rnOlkFo8hPa4",
+          v: "weekly",
+          // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
+          // Add other bootstrap parameters as needed, using camel case.
+        });
+      </script>
+      <script>
+        // Initialize and add the map
+let map;
+
+async function initMap() {
+  // The location of Uluru 40.55022724510268, 14.239252679514344
+  const position = { lat: 40.55, lng: 14.23 };
+  const myPosition = { lat: 40.553380824954644,  lng: 14.219324085926518 };
+  // Request needed libraries.
+  //@ts-ignore
+  const { Map , InfoWindow } = await google.maps.importLibrary("maps");
+  const { AdvancedMarkerElement , PinElement } = await google.maps.importLibrary("marker");
+
+  // A marker with a with a URL pointing to a PNG.
+    const beachFlagImg = document.createElement('img');
+    beachFlagImg.src = 'images/logo-mini.jpg';
+    beachFlagImg.style ="height:15px"
+
+  // stop parcheggio x capri
+    const parkFlagImg = document.createElement('img');
+    parkFlagImg.src = 'https://gesem-gestione-servizi-municipali-nord-milano-api.municipiumapp.it/s3/8167/media/1200px-italian_traffic_signs_-_parcheggio-svg.png';
+    parkFlagImg.style ="height:20px"
+    //40.54995936153687, 14.238682053135248
+
+  // The map -  init the map
+  map = new Map(document.getElementById("map"), {
+    zoom: 13,
+    center: position,
+    mapId: "19987a45305b8346",//5e8eda199dbda90b
+  });
+  const parkFlagMarkerView = new AdvancedMarkerElement({
+    map,
+    position: { lat: 40.54995936153687, lng: 14.238682053135248 },
+    content: parkFlagImg,
+    title: 'Parcheggio per Capri',
+  });
+
+  const beachFlagMarkerView = new AdvancedMarkerElement({
+    map,
+    position: { lat: 40.553380824954644, lng: 14.219324085926518 },
+    content: beachFlagImg,
+    title: 'A marker using a custom PNG Image',
+  });
+
+  // i vari punti di interesse della mappa
+const tourStops = [
+    {
+      position: { lat: 40.56122888850998, lng: 14.205595497908048 },
+      title: "Grotta Azzurra",
+    },
+    {
+      position: { lat: 40.536522969676426,  lng: 14.198788587276004, },
+      title: "Faro di Punta Carena",
+    },
+    {
+      position: { lat: 40.54252733958242, lng: 14.200575970817543, },
+      title: "Sentiero dei Fortini",
+    },
+    {
+      position: { lat: 40.55713191542387,  lng: 14.201904486685299, },
+      title: "Damecuta",
+    },
+    {
+      position: { lat: 40.54029587376164, lng: 14.209354073849937, },
+      title: "Belvedere della Migliara",
+    },
+    {
+      position: { lat: 40.55662329394343,  lng: 14.228261429421096, },
+      title: "Scala fenicia",
+    },
+
+  ];
+  //fine punti interess
+ // Create an info window to share between markers.
+ const infoWindow = new InfoWindow();
+
+// Create the markers.
+tourStops.forEach(({ position, title }, i) => {
+  const pin = new PinElement({
+    glyph: `${i + 1}`,
+    scale: 1,
+  });
+  const marker = new AdvancedMarkerElement({
+    position,
+    map,
+    title: `${i + 1}. ${title}`,
+    content: pin.element,
+    gmpClickable: true,
+  });
+
+  // Add a click listener for each marker, and set up the info window.
+  marker.addListener("click", ({ domEvent, latLng }) => {
+    const { target } = domEvent;
+
+    infoWindow.close();
+    infoWindow.setContent(marker.title);
+    infoWindow.open(marker.map, marker);
+  });
+
+});
+
+
+}
+
+initMap();
+      </script>
 </body>
 </html>
