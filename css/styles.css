@@ -2230,7 +2230,7 @@ p.logo-text {
 
 span.lgtxt {
     color: gold;
-    font: 500 1rem / 2.125rem "Open Sans", sans-serif;
-    letter-spacing: -1px;
-	margin-left: -4px;
+    font: 501 2rem / 2.125rem "Open Sans", sans-serif;
+	letter-spacing: -3px;
+    margin-left: -9px;
 }
