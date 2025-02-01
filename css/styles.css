@@ -805,10 +805,12 @@ input[type='checkbox'] {
 }
 
 .header h1 {
-	margin-bottom: 1rem;
+	background-color: darkslateblue;
 	color: #fff;
-	font-size: 2.5rem;
+	font-size: 3.5rem;
 	line-height: 3rem;
+	border-radius: 10px;
+    box-shadow: 1px 1px 2px 1px #24242442;
 }
 
 .header .p-large {
@@ -2230,7 +2232,14 @@ p.logo-text {
 
 span.lgtxt {
     color: gold;
-    font: 501 2rem / 2.125rem "Open Sans", sans-serif;
-	letter-spacing: -3px;
+    font: 501 2rem / 5.125rem "Open Sans", sans-serif;
+    letter-spacing: -3px;
     margin-left: -9px;
+    position: relative;
+    left: -4px;
+    top: -8px;
+}
+
+.header h2 {
+    color: #46228bb8;
 }
