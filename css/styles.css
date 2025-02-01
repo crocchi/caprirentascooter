@@ -810,7 +810,7 @@ input[type='checkbox'] {
 	font-size: 3.5rem;
 	line-height: 3rem;
 	border-radius: 10px;
-    box-shadow: 1px 1px 2px 1px #24242442;
+    /*box-shadow: 1px 1px 2px 1px #24242442;*/
 }
 
 .header .p-large {
