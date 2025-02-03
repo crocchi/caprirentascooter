@@ -2261,21 +2261,16 @@ form#newsletterForm {
 
 .logoAct {
 	animation-name: run;
-	animation-duration: 7s;
+	animation-duration: 6s;
 	animation-direction: normal;
-	animation-iteration-count: 5;
+	animation-iteration-count: 1;
   }
   @keyframes run {
 	0% {
 	  left: -200px;
-	  transform: rotateY(0deg); 
-	}
-	50% {
-	  left: 400px;
-	  transform: rotateY(0deg); 
 	}
 	100% {
-	  left:600px;
+	  left:190px;
 	}
   }
 
