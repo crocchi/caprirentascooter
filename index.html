@@ -52,7 +52,7 @@
             <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Tivo</a> -->
 
             <!-- Image Logo -->
-            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo-up.gif" alt="alternative">
+            <a class="navbar-brand logo-image" ><img  id="imagelogo" src="images/logo2(0).gif" alt="alternative">
              <!--<p class="logo-text">Capri <span class="lgtxt">Rent a Scooter</span> </p>-->
             </a> 
 
@@ -125,7 +125,7 @@
                     <div class="col-lg-6 col-xl-7">
                         <div class="image-container">
                             <div class="img-wrapper">
-                                <img class="img-fluid-logo img-logo-act logoAct" src="images/logo-full.gif" alt="alternative">
+                                <img onclick="logoo()" class="img-fluid-logo img-logo-act logoAct" src="images/logo-full.gif" alt="alternative">
                             </div> <!-- end of img-wrapper -->
                         </div> <!-- end of image-container -->
                     </div> <!-- end of col -->
@@ -874,6 +874,16 @@ tourStops.forEach(({ position, title }, i) => {
 }
 
 initMap();
+      </script>
+      <script>
+        let i=0;
+        document.addEventListener('DOMContentLoaded', function() {
+    const imgElement = document.getElementById('imagelogo');
+    imgElement.addEventListener('click', function() {
+        imgElement.src = `images/logo2(${i}).gif`; 
+        i++// Change this to the new image URL
+    });
+});
       </script>
 </body>
 </html>
