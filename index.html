@@ -875,6 +875,7 @@ tourStops.forEach(({ position, title }, i) => {
 
 initMap();
       </script>
+
       <script>
         let i=0;
         document.addEventListener('DOMContentLoaded', function() {
@@ -884,6 +885,33 @@ initMap();
         i++// Change this to the new image URL
     });
 });
+
+const apiKey = 'AIzaSyBU8ZGzVNM00GCy4QBdLt-rnOlkFo8hPa4'; // Replace with your actual API key
+const placeId = 'ChIJoSU3AdV5OxMRtuRaWPW3-38'; // Replace with the actual place ID
+
+async function getGoogleReviews() {
+    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&key=${apiKey}`;
+
+    try {
+        const response = await fetch(url);
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        const data = await response.json();
+        if (data.status !== 'OK') {
+            throw new Error('Error fetching place details: ' + data.status);
+        }
+
+        const reviews = data.result.reviews;
+        console.log(reviews);
+        return reviews;
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
+}
+
+// Call the function to get reviews
+getGoogleReviews();
       </script>
 </body>
 </html>
