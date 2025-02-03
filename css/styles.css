@@ -2267,10 +2267,10 @@ form#newsletterForm {
   }
   @keyframes run {
 	0% {
-	  left: -200px;
+	  left: -100%;
 	}
 	100% {
-	  left:190px;
+	  left:30%;
 	}
   }
 
