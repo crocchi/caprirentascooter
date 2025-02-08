@@ -2167,11 +2167,6 @@ a:hover.back-to-top {
 }
 /* end of min-width width 1200px */
 
-.img-fluid-logo {
-    max-width: 30%;
-    height: auto;
-}
-
 .img-fluid-card {
     max-width: 70%;
     height: auto;
@@ -2254,25 +2249,49 @@ form#newsletterForm {
     justify-content: flex-end;
 }
 
-.img-logo-act {
-    position: absolute;
-	bottom: -60px;
-}
 
-.logoAct {
-	animation-name: run;
-	animation-duration: 6s;
-	animation-direction: normal;
-	animation-iteration-count: 1;
+
+@media (min-width: 992px) {
+
+		.img-logo-act {
+			position: relative;
+		}
+		.header .header-content {
+			text-align: center;
+		}
+		.img-fluid-logo {
+			max-width: 50%;
+			height: auto;
+		}
+	
   }
-  @keyframes run {
-	0% {
-	  left: -100%;
+
+@media (max-width: 992px) {
+	.logoAct {
+		animation-name: run;
+		animation-duration: 6s;
+		animation-direction: normal;
+		animation-iteration-count: 1;
+	  }
+	  .img-logo-act {
+		position: absolute;
+		bottom: -60px;
+	  }
+	  .img-fluid-logo {
+		max-width: 30%;
+		height: auto;
 	}
-	100% {
-	  left:30%;
-	}
+	  @keyframes run {
+		0% {
+		  left: -100%;
+		}
+		100% {
+		  left:30%;
+		}
+	  }
   }
+
+
 
   .fixform{
 	display: flex;
