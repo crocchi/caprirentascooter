@@ -831,7 +831,7 @@ photoImg.src = place.photos[iii].getURI({maxHeight: 300});
   //google.maps.places.Pl
   // A marker with a with a URL pointing to a PNG.
     const beachFlagImg = document.createElement('img');
-    beachFlagImg.src = 'images/logo-mini.jpg';
+    beachFlagImg.src = 'images/logo2(19).gif';
     beachFlagImg.style ="height:15px"
 
   // stop parcheggio x capri
@@ -923,7 +923,7 @@ const locationButton = document.createElement("button");
 
   //img logo posizione
   const flagImg = document.createElement('img');
-    flagImg.src = 'https://gesem-gestione-servizi-municipali-nord-milano-api.municipiumapp.it/s3/8167/media/1200px-italian_traffic_signs_-_parcheggio-svg.png';
+    flagImg.src = 'images/flag.gif';
     flagImg.style ="height:20px"
     /*
     const pin = new PinElement({
@@ -961,9 +961,11 @@ const locationButton = document.createElement("button");
     title: 'A marker using a custom PNG Image',
   });
 
+  /*
           infoWindow.setPosition(pos);
           infoWindow.setContent("Location found.");
           infoWindow.open(map);
+          */
           map.setCenter(pos);
         },
         () => {
