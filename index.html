@@ -921,6 +921,23 @@ tourStops.forEach(({ position, title }, i) => {
 
 const locationButton = document.createElement("button");
 
+  //img logo posizione
+  const flagImg = document.createElement('img');
+    flagImg.src = 'https://gesem-gestione-servizi-municipali-nord-milano-api.municipiumapp.it/s3/8167/media/1200px-italian_traffic_signs_-_parcheggio-svg.png';
+    flagImg.style ="height:20px"
+    /*
+    const pin = new PinElement({
+    glyph: `${i + 1}`,
+    scale: 1,
+  });
+  const marker = new AdvancedMarkerElement({
+    position,
+    map,
+    title: `${i + 1}. ${title}`,
+    content: pin.element,
+    gmpClickable: true,
+  });*/
+
   locationButton.textContent = "Current Location";
   locationButton.classList.add("custom-map-control-button");
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
@@ -935,6 +952,15 @@ const locationButton = document.createElement("button");
             lng: position.coords.longitude,
           };
           console.log(pos)
+
+
+ const beachFlagMarkerView = new AdvancedMarkerElement({
+    map,
+    position: pos,
+    content: flagImg,
+    title: 'A marker using a custom PNG Image',
+  });
+
           infoWindow.setPosition(pos);
           infoWindow.setContent("Location found.");
           infoWindow.open(map);
