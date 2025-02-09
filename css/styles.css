@@ -2269,9 +2269,9 @@ form#newsletterForm {
 @media (max-width: 992px) {
 	.logoAct {
 		animation-name: run;
-		animation-duration: 6s;
-		animation-direction: normal;
-		animation-iteration-count: 1;
+		animation-duration: 30s;
+		animation-direction: alternate;
+		animation-iteration-count: 2;
 	  }
 	  .img-logo-act {
 		position: absolute;
@@ -2282,12 +2282,15 @@ form#newsletterForm {
 		height: auto;
 	}
 	  @keyframes run {
-		0% {
-		  left: -100%;
-		}
-		100% {
-		  left:30%;
-		}
+		from {left: 0;}
+		to {left: 65%;}
+	  }
+	@keyframes runn {
+		0%   {left: 0; transform: scaleX(1);}
+		25%  {left: 110%; transform: scaleX(1);}
+		50%  {left: 200%; transform: scaleX(1);}
+		75%  {left: 110%; transform: scaleX(-1);}
+		100% {left: 0; transform: scaleX(-1);}
 	  }
   }
 

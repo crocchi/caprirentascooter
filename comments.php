@@ -50,7 +50,7 @@ echo getReviews($options);
 */
 
 $options = array(
-  'googlemaps_free_apikey' => 'AIzaSyBU8ZGzVNM00GCy4QBdLt-rnOlkFo8hPa4',       // Google API Key
+  'googlemaps_free_apikey' => '',       // Google API Key
   'google_maps_review_cid' => 'ChIJoSU3AdV5OxMRtuRaWPW3-38', // Google Placec ID of the Business
   'google_reviews_sorting' => 'most_relevant',  // reviews are sorted by relevance (default), or in chronological order (most_relevant/newest)
   'cache_data_xdays_local' => 30,       // every x day the reviews are loaded from google (save API traffic)
@@ -75,7 +75,7 @@ $options = array(
 echo '<style> .review { font-family: sans-serif; } .review .avatar { float: left; width: 75px; padding-right: 20px; padding-bottom: 10px;} </style>';
 echo getReviews($options);
 
-
+//curl -L -X GET 'https://maps.googleapis.com/maps/api/place/details/json?place_id=ChIJN1t_tDeuEmsRUsoyG83frY4&fields=name%2Crating%2Cformatted_phone_number&key=YOUR_API_KEY'
 function getReviews($option) {
   if ( file_exists('reviews.json') && (filemtime('reviews.json') > strtotime('-'.$option['cache_data_xdays_local'].' days')) ) {
     $result = file_get_contents('reviews.json');
