@@ -553,9 +553,11 @@
                   
                     <div class="slider-container">
                         <div class="swiper-container text-slider">
-                            <div class="swiper-wrapper">
+                            <img class="img-fluido" src="https://logos-world.net/wp-content/uploads/2023/12/Google-Review-Logo.png" alt="alternative">
                                 
-                                <!-- Slide -->
+                            <div id="slide-comments" class="swiper-wrapper">
+                                
+                               <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="image-wrapper">
                                         <img class="img-fluid" src="images/testimonial-1.jpg" alt="alternative">
@@ -563,45 +565,10 @@
                                     <div class="text-wrapper">
                                         <div class="testimonial-text">I started to use Tivo with the free trial about a year ago and never stopped since then. It does all the repeating marketing tasks and allows me to focus on core development activities like new product research and design. I love it and recommend it to everyone.</div>
                                         <div class="testimonial-author">Jude Thorn - Online Marketer</div>
+                                        <img class="img-star" src="https://e7.pngegg.com/pngimages/20/454/png-clipart-star-star.png" alt="alternative">
                                     </div> <!-- end of text-wrapper -->
                                 </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-2.jpg" alt="alternative">
-                                    </div> <!-- end of image-wrapper -->
-                                    <div class="text-wrapper">
-                                        <div class="testimonial-text">Awesome features for the money. I never thought such a low ammount of money would bring me so many leads per month. Before Tivo I used the services of an agency which cost 10x more and delivered far less. Highly recommended to marketers focused on results.</div>
-                                        <div class="testimonial-author">Roy Smith - Developer</div>
-                                    </div> <!-- end of text-wrapper -->
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-3.jpg" alt="alternative">
-                                    </div> <!-- end of image-wrapper -->
-                                    <div class="text-wrapper">
-                                        <div class="testimonial-text">Tivo is the best marketing automation app for small and medium sized business. It understands the mindset of young entrepreneurs and provides the necessary data for wise marketing decisions. Just give it a try and you will definitely not regret spending your time.</div>
-                                        <div class="testimonial-author">Marsha Singer - Online Marketer</div>
-                                    </div> <!-- end of text-wrapper -->
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="image-wrapper">
-                                        <img class="img-fluid" src="images/testimonial-4.jpg" alt="alternative">
-                                    </div> <!-- end of image-wrapper -->
-                                    <div class="text-wrapper">
-                                        <div class="testimonial-text">Tivo is one of the greatest marketing automation apps out there. I especially love the Reporting Tools module because it gives me such a great amount of information based on little amounts of input gathered in just few weeks of light weight usage. Recommended!</div>
-                                        <div class="testimonial-author">Ronda Louis - Online Marketer</div>
-                                    </div> <!-- end of text-wrapper -->
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
+                                <!-- end of slide -->                       
 
                             </div> <!-- end of swiper-wrapper -->
                             
@@ -805,20 +772,80 @@ await place.fetchFields({
   console.log(place.place.Eg.formattedAddress);
   console.log(place.place.Eg.location);
   console.log(place.place.Eg.reviews);
-/*
-  place.place.Eg.photos.forEach(({ authorAttributions , flagContentURI }, i) => {
-    console.log(authorAttributions[0].uri);
-    console.log(flagContentURI)
-  })
-  /*
+
+  let cont=3;
+  place.place.Eg.reviews.forEach(( { authorAttribution, rating , text, publishTime,relativePublishTimeDescription},review) => {
+    console.log(` Commento:${text}.\n - ${authorAttribution.displayName}`);
+  //console.log(review);
+
+    let tempEl=document.getElementById('slide-comments');
+    //slide-comments
    // Format the review using HTML.
-  contentString = `
-          <div id="title"><b>${place.displayName}</b></div>
-          <div id="address">${place.formattedAddress}</div>
-          <a href="${authorUri}" target="_blank">Author: ${authorName}</a>
-          <div id="rating">Rating: ${reviewRating} stars</div>
-          <div id="rating"><p>Review: ${reviewText}</p></div>`;
-  */
+   cont++;
+   /*
+   tempEl.innerHTML += `
+                    <div class="swiper-slide" data-swiper-slide-index="${cont}">
+                        <div class="image-wrapper">
+                                <img class="img-fluid" src="${authorAttribution.photoURI}" alt="alternative">
+                        </div>
+                                <div class="text-wrapper">
+                                    <div class="testimonial-text">${text}</div>
+                                    <div class="testimonial-author">${authorAttribution.displayName} - </div>
+                                </div> 
+                    </div> 
+           `;*/
+
+    // Create the swiper-slide div
+    const swiperSlide = document.createElement('div');
+    swiperSlide.className = 'swiper-slide';
+    //swiperSlide.setAttribute('data-swiper-slide-index', cont);
+
+    // Create the image-wrapper div
+    const imageWrapper = document.createElement('div');
+    imageWrapper.className = 'image-wrapper';
+
+    // Create the img element
+    const img = document.createElement('img');
+    img.className = 'img-fluid';
+    img.src = authorAttribution.photoURI;
+    img.alt = 'alternative';
+
+    // Append img to image-wrapper
+    imageWrapper.appendChild(img);
+
+    // Create the text-wrapper div
+    const textWrapper = document.createElement('div');
+    textWrapper.className = 'text-wrapper';
+
+    // Create the testimonial-text div
+    const testimonialText = document.createElement('div');
+    testimonialText.className = 'testimonial-text';
+    testimonialText.textContent = text;
+
+    // Create the testimonial-author div
+    const testimonialAuthor = document.createElement('div');
+    testimonialAuthor.className = 'testimonial-author';
+    testimonialAuthor.textContent = `${authorAttribution.displayName} - ${relativePublishTimeDescription}`;
+
+    //relativePublishTimeDescription
+       // Create the star image element
+       const starImg = document.createElement('img');
+    starImg.className = 'img-star';
+    starImg.src = `images/star${rating}.gif`;
+
+
+    // Append testimonial-text and testimonial-author to text-wrapper
+    textWrapper.appendChild(testimonialText);
+    textWrapper.appendChild(testimonialAuthor);
+    textWrapper.appendChild(starImg);
+
+    // Append image-wrapper and text-wrapper to swiper-slide
+    swiperSlide.appendChild(imageWrapper);
+    swiperSlide.appendChild(textWrapper);
+
+    // Append swiper-slide to tempEl
+    tempEl.appendChild(swiperSlide);
+        })
 }).catch((error) => {
   console.error(error);
 });

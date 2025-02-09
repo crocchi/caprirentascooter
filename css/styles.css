@@ -2328,3 +2328,10 @@ button.custom-map-control-button {
     /* width: 10em; */
     font-size: 3vw;
 }
+img.img-fluido {
+    width: 15vw;
+    padding-bottom: 5vw;
+}
+img.img-star {
+    width: 14vw;
+}

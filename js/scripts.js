@@ -48,7 +48,8 @@
         $(".navbar-collapse").collapse('hide');
     });
 
-
+    
+    const slider= ( ) =>{
     /* Image Slider - Swiper */
     var imageSlider = new Swiper('.image-slider', {
         autoplay: {
@@ -96,7 +97,10 @@
 			prevEl: '.swiper-button-prev'
 		}
     });
-
+} // end script
+setTimeout(function() {
+    slider()
+ }, 4000);
 
     /* Video Lightbox - Magnific Popup */
     $('.popup-youtube, .popup-vimeo').magnificPopup({
