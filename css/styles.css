@@ -2324,3 +2324,7 @@ form#newsletterForm {
     width: 120px;
     padding-left: 5px;
 }
+button.custom-map-control-button {
+    /* width: 10em; */
+    font-size: 2vw;
+}
