@@ -1216,6 +1216,7 @@ input[type='checkbox'] {
 	padding-top: 7.875rem;
 	padding-bottom: 2.25rem;
 	text-align: center;
+	background-color: aliceblue;
 }
 
 .cards-2 .h2-heading {
@@ -2192,7 +2193,10 @@ h2.h2-heading.comments {
     text-align: center;
 }
 .mapTxt {
-    padding-bottom: 1em;
+	padding-bottom: 1em;
+    color: #333;
+    font: 700 2rem / 2.625rem "Open Sans", sans-serif;
+    letter-spacing: -0.2px;
 }
 div#mapLegenda {
     padding-top: 2.5em;
