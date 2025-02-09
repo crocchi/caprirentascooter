@@ -549,26 +549,25 @@
                     <div class="above-heading">what they say about us</div>
                     <h2 class="h2-heading comments">Our customers</h2>
                     <!-- Text Slider -->
-                    <div id="comme"class="elfsight-app-82672fb1-9c23-4892-8dc3-f51116ad5954" data-elfsight-app-lazy></div>   
-                  
+                   
                     <div class="slider-container">
                         <div class="swiper-container text-slider">
                             <img class="img-fluido" src="https://logos-world.net/wp-content/uploads/2023/12/Google-Review-Logo.png" alt="alternative">
                                 
                             <div id="slide-comments" class="swiper-wrapper">
                                 
-                               <!-- Slide -->
+                               <!-- Slide
                                 <div class="swiper-slide">
                                     <div class="image-wrapper">
                                         <img class="img-fluid" src="images/testimonial-1.jpg" alt="alternative">
-                                    </div> <!-- end of image-wrapper -->
+                                    </div> 
                                     <div class="text-wrapper">
                                         <div class="testimonial-text">I started to use Tivo with the free trial about a year ago and never stopped since then. It does all the repeating marketing tasks and allows me to focus on core development activities like new product research and design. I love it and recommend it to everyone.</div>
                                         <div class="testimonial-author">Jude Thorn - Online Marketer</div>
                                         <img class="img-star" src="https://e7.pngegg.com/pngimages/20/454/png-clipart-star-star.png" alt="alternative">
-                                    </div> <!-- end of text-wrapper -->
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->                       
+                                    </div>
+                                </div> 
+                               end of slide -->                       
 
                             </div> <!-- end of swiper-wrapper -->
                             
@@ -740,14 +739,13 @@
           // Add other bootstrap parameters as needed, using camel case.
         });
       </script>
-      <script src="https://static.elfsight.com/platform/platform.js" async></script>
-
+   
       <script>
         // Initialize and add the map
 let map;
 
 async function initMap() {
-  // The location of Uluru 40.55022724510268, 14.239252679514344
+  // The location of caprirentscooter 40.55022724510268, 14.239252679514344
   const position = { lat: 40.55, lng: 14.23 };
   const myPosition = { lat: 40.553380824954644,  lng: 14.219324085926518 };
 
@@ -773,7 +771,7 @@ await place.fetchFields({
   console.log(place.place.Eg.location);
   console.log(place.place.Eg.reviews);
 
-  let cont=3;
+ 
   place.place.Eg.reviews.forEach(( { authorAttribution, rating , text, publishTime,relativePublishTimeDescription},review) => {
     console.log(` Commento:${text}.\n - ${authorAttribution.displayName}`);
   //console.log(review);
@@ -781,7 +779,7 @@ await place.fetchFields({
     let tempEl=document.getElementById('slide-comments');
     //slide-comments
    // Format the review using HTML.
-   cont++;
+
    /*
    tempEl.innerHTML += `
                     <div class="swiper-slide" data-swiper-slide-index="${cont}">
@@ -853,7 +851,13 @@ await place.fetchFields({
 const photoImg = document.getElementById('image-contan');
 //funzione x ricevere url della foto...altrimenti da errore di permesso
 let iii=Math.floor(Math.random() * 10) + 1;
-photoImg.src = place.photos[iii].getURI({maxHeight: 300});
+
+//click - change img src
+let cont=1;
+photoImg.addEventListener("click", (i) => {
+    document.getElementById('image-contan').src = place.photos[cont++].getURI({maxHeight: 300});
+  });
+  photoImg.src = place.photos[iii].getURI({maxHeight: 300});
 
   //google.maps.places.Pl
   // A marker with a with a URL pointing to a PNG.

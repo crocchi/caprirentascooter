@@ -2329,9 +2329,10 @@ button.custom-map-control-button {
     font-size: 3vw;
 }
 img.img-fluido {
-    width: 15vw;
-    padding-bottom: 5vw;
+    width: 20vh;
+    padding-bottom: 6vh;
 }
 img.img-star {
-    width: 14vw;
+	width: 80px;
+	filter: hue-rotate(319deg);
 }

@@ -88,7 +88,7 @@
     /* Text Slider - Swiper */
 	var textSlider = new Swiper('.text-slider', {
         autoplay: {
-            delay: 6000,
+            delay: 10000,
             disableOnInteraction: false
 		},
         loop: true,
@@ -100,7 +100,7 @@
 } // end script
 setTimeout(function() {
     slider()
- }, 4000);
+ }, 3000);
 
     /* Video Lightbox - Magnific Popup */
     $('.popup-youtube, .popup-vimeo').magnificPopup({
