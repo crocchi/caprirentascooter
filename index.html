@@ -940,9 +940,8 @@ const locationButton = document.createElement("button");
 
   locationButton.textContent = "Current Location";
   locationButton.classList.add("custom-map-control-button");
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-
   locationButton.addEventListener("click", () => {
+    
     // Try HTML5 geolocation.
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
@@ -977,7 +976,7 @@ const locationButton = document.createElement("button");
       handleLocationError(false, infoWindow, map.getCenter());
     }
   });
-
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
 }
 
 initMap();
