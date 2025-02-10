@@ -792,8 +792,10 @@ input[type='checkbox'] {
 .header {
 	/*background-color: #5f4dee; background: linear-gradient(175deg, #5f4dee 3%, #9a00ffc4 50% , #5f4dee 100%);
 	background: linear-gradient(175deg, #0150ac 20%, #8fd340 50% , #0150ac 80%);*/
-	background: linear-gradient(175deg, #0076ff 20%, #14b68ddb 50%, #0150ac 80%);
-	background-color:#0076ff;
+	/*background: linear-gradient(175deg, #0076ff 20%, #14b68ddb 50%, #0150ac 80%);
+	background-color:#0076ff;*/
+	background: linear-gradient(178deg, #00B7FF 20%, #1FC2DD 30%, #1FC2DD 45%, #47D0AF 65%, #63DA90 80%);
+
 }
 
 .header .header-content {
@@ -2341,3 +2343,14 @@ img.img-star {
 	width: 80px;
 	filter: hue-rotate(319deg);
 }
+/*
+background: linear-gradient(178deg, #00B7FF 20%, #1FC2DD 25%,
+                       #1FC2DD 40%, #47D0AF 65%, #88E766 100%);*/
+
+
+.header {
+    background: linear-gradient(178deg, #00B7FF 20%, #1FC2DD 30%, #1FC2DD 45%, #47D0AF 65%, #63DA90 80%);
+    }
+.cls-1 {
+		fill: #64da91;
+	}
