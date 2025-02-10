@@ -599,8 +599,7 @@
 
                             <div id="mapLegenda">
                             <ul class="list-unstyled li-space-lg">
-                                <button class="custom-map-control-button" style="position: absolute; top: 0px; left: 235px;">Current Location</button>
-                                <li class="mediaMap">
+                              <li class="mediaMap">
                                     <span class="point-number">1</span><div class="media-body">Grotta Azzurra</div>
                                 </li>
                                 <li class="mediaMap">
@@ -950,8 +949,8 @@ tourStops.forEach(({ position, title }, i) => {
 });
 
 //////////////////////           GEOLOCATION
-
-const locationButton = document.createElement("button");
+//locationButton
+const locationButton = document.createElement("Button");
 
   //img logo posizione
   const flagImg = document.createElement('img');
@@ -972,6 +971,7 @@ const locationButton = document.createElement("button");
 
   locationButton.textContent = "Current Location";
   locationButton.classList.add("custom-map-control-button");
+
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
   locationButton.addEventListener("click", () => {
     

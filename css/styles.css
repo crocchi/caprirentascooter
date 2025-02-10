@@ -2331,6 +2331,7 @@ form#newsletterForm {
 button.custom-map-control-button {
     /* width: 10em; */
     font-size: 3vw;
+	width: 10em;
 }
 img.img-fluido {
     width: 20vh;
