@@ -58,7 +58,8 @@
 
             <!-- Mobile Menu call me Button -->
             <div class="navPhone">
-                <i class="fas fa-phone"></i>    
+                <a id="phoneLink" href="tel:+1234567890"> <i class="fas fa-phone"></i></a>
+                <a id="whatsappLink" href="https://wa.me/1234567890" target="_blank"> <i class="fab fa-whatsapp"></i> </a>   
             </div>
             <!-- Mobile Menu Toggle Button -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -171,8 +172,8 @@
                                             <div class="form-group conne">
                                                 <label for="cars">Comunication:</label>
                                                 <select id="cars" name="cars">
-                                                    <option value="volvo">WHATZAPP</option>
-                                                    <option value="saab">EMAIL</option>
+                                                    <option value="volvo">whatsapp</option>
+                                                    <option value="saab">email</option>
                                                   </select>
                                             </div>
 
@@ -540,9 +541,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">   
-                    <div class="above-heading">what they say about us</div>
+                    <div class="above-heading">
                     <img class="img-fluido" src="https://logos-world.net/wp-content/uploads/2023/12/Google-Review-Logo.png" alt="alternative">
-                             
+                </div>      
                     <!-- Text Slider -->
                    
                     <div class="slider-container">
@@ -1019,6 +1020,22 @@ initMap();
     });
 });
 
+
+//                <i id="cellular" class="fas fa-phone"></i>   
+//             <i id="wazap" class="fab fa-whatsapp"></i></i> 
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+            // Set phone and WhatsApp links
+            const phoneNumber = '+393283771217';
+            const whatsappNumber = '+393283771217';
+
+            const phoneLink = document.getElementById('phoneLink');
+            phoneLink.href = `tel:${phoneNumber}`;
+
+            const whatsappLink = document.getElementById('whatsappLink');
+            whatsappLink.href = `https://wa.me/${whatsappNumber}`;
+        }, 2000); // 2000 milliseconds = 2 seconds
+    });
       </script>
 </body>
 </html>
