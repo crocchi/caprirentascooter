@@ -547,13 +547,13 @@
             <div class="row">
                 <div class="col-lg-12">   
                     <div class="above-heading">what they say about us</div>
-                    <h2 class="h2-heading comments">Our customers</h2>
+                    <img class="img-fluido" src="https://logos-world.net/wp-content/uploads/2023/12/Google-Review-Logo.png" alt="alternative">
+                             
                     <!-- Text Slider -->
                    
                     <div class="slider-container">
                         <div class="swiper-container text-slider">
-                            <img class="img-fluido" src="https://logos-world.net/wp-content/uploads/2023/12/Google-Review-Logo.png" alt="alternative">
-                                
+                               
                             <div id="slide-comments" class="swiper-wrapper">
                                 
                                <!-- Slide
@@ -599,6 +599,7 @@
 
                             <div id="mapLegenda">
                             <ul class="list-unstyled li-space-lg">
+                                <button class="custom-map-control-button" style="position: absolute; top: 0px; left: 235px;">Current Location</button>
                                 <li class="mediaMap">
                                     <span class="point-number">1</span><div class="media-body">Grotta Azzurra</div>
                                 </li>
@@ -971,6 +972,7 @@ const locationButton = document.createElement("button");
 
   locationButton.textContent = "Current Location";
   locationButton.classList.add("custom-map-control-button");
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
   locationButton.addEventListener("click", () => {
     
     // Try HTML5 geolocation.
@@ -1007,7 +1009,7 @@ const locationButton = document.createElement("button");
       handleLocationError(false, infoWindow, map.getCenter());
     }
   });
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
+  
 }
 
 initMap();
