@@ -9,13 +9,13 @@
     <meta name="author" content="CapriRentaScooter">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-	<meta property="og:site_name" content="" /> <!-- website name -->
-	<meta property="og:site" content="" /> <!-- website link -->
-	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-	<meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Capri Rent A Scooter" />
+    <meta property="og:site" content="https://www.caprirentascooter.com" />
+    <meta property="og:title" content="Capri Rent A Scooter - Roam free, on the Isle of Capri!" />
+    <meta property="og:description" content="A scooter gives you the freedom to roam where you choose and when you choose on the Isle of Capri." />
+    <meta property="og:image" content="https://www.caprirentascooter.com/images/og-image.jpg" />
+    <meta property="og:url" content="https://www.caprirentascooter.com" />
+    <meta property="og:type" content="website" />
 
     <!-- Website Title -->
     <title>Capri - Rent a scooter </title>
@@ -80,7 +80,7 @@
                         <a class="nav-link page-scroll" href="#mapss">MAPS</a>
                     </li>
 
-                    <!-- Dropdown Menu -->          
+                    <!-- Dropdown Menu     
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle page-scroll" href="#video" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">VIDEO</a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -91,11 +91,13 @@
                             <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY POLICY</span></a>
                         </div>
                     </li>
-                    <!-- end of dropdown menu -->
+                    end of dropdown menu -->
 
                     <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#pricing">PRICING</a>
+                        <a class="nav-link page-scroll" href="#video">VIDEO</a>
                     </li>
+
+                 
                 </ul>
                 <!-- <span class="nav-item">
                     <a class="btn-outline-sm" href="#mapss">MAPS</a>
@@ -160,7 +162,7 @@
                                                 <input type="date" class="form-control-input" id="nesdate" required="">
                                                 <label class="label-control" for="nesdate">start date</label>    
 
-                                                <input type="time" class="form-control-input" id="nehour" required="">
+                                                <input type="time" class="form-control-input" id="neshour" required="">
                                                 <label class="label-control-right" for="nehour">hours</label>    
                                                 <div class="help-block with-errors"></div>
                                             </div>
@@ -178,21 +180,20 @@
 
                                             <div class="form-group conne">
                                                 <label for="cars">Comunication:</label>
-                                                <select id="cars" name="cars">
-                                                    <option value="volvo">whatsapp</option>
-                                                    <option value="saab">email</option>
+                                                <select id="communication" name="cars">
+                                                    <option value="whatsapp">whatsapp</option>
+                                                    <option value="email">email</option>
                                                   </select>
                                             </div>
 
                                             
 
-                                            
                                             <div class="form-group checkbox">
                                                 <input type="checkbox" id="nterms" value="Agreed-to-Terms" required="">I'm not a Robot! <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms Conditions</a> 
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                             <div class="form-group">
-                                                <button type="submit" class="form-control-submit-button disabled">SEND REQUEST</button>
+                                                <button type="submit" id="sendRequest" class="form-control-submit-button disabled">SEND REQUEST</button>
                                             </div>
                                             <div class="form-message">
                                                 <div id="nmsgSubmit" class="h3 text-center hidden"></div>
@@ -224,7 +225,7 @@
                         <div class="swiper-container image-slider">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                        <img class="img-fluid-card" src="https://rentscootercapri.it/wp-content/uploads/2020/02/Rent-Scooter-Capri-Vespa50-2t-768x511.jpg" alt="alternative">
+                                        <img class="img-fluid-card" src="images/capri-rent7.jpg" alt="alternative">
                                 </div>
                                 <div class="swiper-slide">
                                         <img class="img-fluid-card" src="https://rentscootercapri.it/wp-content/uploads/2020/02/Rent-Scooter-Capri-People50-768x541.jpg" alt="alternative">
@@ -309,7 +310,7 @@
                 <i class="fas fa-check"></i><div class="media-body">Civil Liability Insurance</div>
             </li>
             <li class="media">
-                <i class="fas fa-times"></i><div class="media-body">Map of the island</div>
+                <i class="fas fa-check"></i><div class="media-body">Map of the island</div>
             </li>
         </ul>
 
@@ -350,9 +351,10 @@
     </div> <!-- end of cards-1 -->
     <!-- end of description -->
 
-
+ 
     <!-- Details Lightboxes -->
-    <!-- Details Lightbox 1 -->
+    <!-- Details Lightbox 1 
+
 	<div id="details-lightbox-1" class="lightbox-basic zoom-anim-dialog mfp-hide">
         <div class="container">
             <div class="row">
@@ -360,8 +362,8 @@
                 <div class="col-lg-8">
                     <div class="image-container">
                         <img class="img-fluid" src="images/details-lightbox.png" alt="alternative">
-                    </div> <!-- end of image-container -->
-                </div> <!-- end of col -->
+                    </div> 
+                </div> 
                 <div class="col-lg-4">
                     <h3>List Building</h3>
                     <hr>
@@ -388,157 +390,38 @@
                         </li>
                     </ul>
                     <a class="btn-solid-reg mfp-close" href="sign-up.html">SIGN UP</a> <a class="btn-outline-reg mfp-close as-button" href="#screenshots">BACK</a>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of lightbox-basic -->
-    <!-- end of details lightbox 1 -->
-
-    <!-- Video -->
-    <div id="video" class="basic-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-
-                    <!-- Video Preview -->
-                    <div class="image-container">
-                        <div class="video-wrapper">
-                                <iframe width="560" height="515" src="https://www.youtube.com/embed/oP5FRmbLD0k?controls=0&modestbranding=0&rel=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                            
-                              
-                        </div> <!-- end of video-wrapper -->
-                    </div> <!-- end of image-container -->
-                    <!-- end of video preview -->
-
-                    <div class="p-heading">VIDEO video video situation bla bla bla</div>        
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of basic-2 -->
-    <!-- end of video -->
+                </div> end of col 
+            </div> 
+        </div> 
+    </div> 
+   end of details lightbox 1 -->
 
 
-    <!-- Pricing -->
-    <div id="pricing" class="cards-2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="above-heading">PRICING</div>
-                    <h2 class="h2-heading">Pricing Options Table</h2>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
+  <!-- Video -->
+  <div id="video" class="basic-2">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
 
-                    <!-- Card 
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">BASIC</div>
-                            <div class="price"><span class="currency">$</span><span class="value">Free</span></div>
-                            <div class="frequency">14 days trial</div>
-                            <div class="divider"></div>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Email Marketing Module</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">User Control Management</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i><div class="media-body">List Building And Cleaning</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i><div class="media-body">Collected Data Reports</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i><div class="media-body">Planning And Evaluation</div>
-                                </li>
-                            </ul>
-                            <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="sign-up.html">SIGN UP</a>
-                            </div>
-                        </div>
-                    </div> 
-                    -->
-                    <!-- end of card -->
-                    <!-- end of card -->
-           
-                    <!-- Card-->
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="card-title">EASY</div>
-                            <div class="price"><span class="currency">$</span><span class="value">29.99</span></div>
-                            <div class="frequency">2h</div>
-                            <div class="divider"></div>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">2 Helmets</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Unlimited kilometres</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Petrol included</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Civil Liability Insurance</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-times"></i><div class="media-body">Map of the island</div>
-                                </li>
-                            </ul>
-                            <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="sign-up.html">BUY ONLINE</a>
-                            </div>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
+                <!-- Video Preview -->
+                <div class="image-container">
+                    <div class="video-wrapper">
 
-                    <!-- Card-->
-                    <div class="card">
-                        <!--<div class="label">
-                            <p class="best-value">Best Value</p>
-                        </div> -->
-                        <div class="card-body">
-                            <div class="card-title">COMPLETE</div>
-                            <div class="price"><span class="currency">$</span><span class="value">59.99</span></div>
-                            <div class="frequency">1 Day</div>
-                            <div class="divider"></div>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">2 Helmets</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Unlimited kilometres</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Petrol included</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Civil Liability Insurance</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-check"></i><div class="media-body">Planning And Evaluation</div>
-                                </li>
-                            </ul>
-                            <div class="button-wrapper">
-                                <a class="btn-solid-reg page-scroll" href="sign-up.html">BUY ONLINE</a>
-                                <stripe-buy-button
-  buy-button-id="buy_btn_1Qne8gAaBdowjnuNjE0LMbb4"
-  publishable-key="pk_test_51OyOcDAaBdowjnuNmIxKSM1aYiMmBaV9onb50ikftgBon6YWBJu15hvvGh9lR2hZedxPqvBwH5pJuEbUn64PL0ik00wHhSSvM6"
->
-</stripe-buy-button>
-                            </div>
-                        </div>
-                    </div> <!-- end of card -->
-                    <!-- end of card -->
+                        <video id="videoElement" controls>
+                            <source src="video/caprirentascooter.mp4" type="video/mp4">
+                            Your browser does not support HTML video.
+                          </video>
+                          <div id="watermark">www.caprirentascooter.com</div>
+                    </div> <!-- end of video-wrapper -->
+                </div> <!-- end of image-container -->
+                <!-- end of video preview -->
 
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of cards-2 -->
-    <!-- end of pricing -->
-
+                <div class="p-heading">VIDEO - CapriRentaScooter</div>        
+            </div> <!-- end of col -->
+        </div> <!-- end of row -->
+    </div> <!-- end of container -->
+</div> <!-- end of basic-2 -->
+<!-- end of video -->
 
     <!-- Testimonials -->
     <div class="slider-2">
@@ -546,7 +429,9 @@
             <div class="row">
                 <div class="col-lg-12">   
                     <div class="above-heading">
+                        <a href="https://www.google.com/maps/place/Capri+rent+a+scooter/@40.5503972,14.2047165,15z/data=!4m8!3m7!1s0x133b79d5013725a1:0x7ffbb7f5585ae4b6!8m2!3d40.5532667!4d14.218734!9m1!1b1!16s%2Fg%2F11h2n2_j1d?entry=ttu&g_ep=EgoyMDI1MDMxOS4yIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer">
                     <img class="img-fluido" src="https://logos-world.net/wp-content/uploads/2023/12/Google-Review-Logo.png" alt="alternative">
+                </a>
                 </div>      
                     <!-- Text Slider -->
                    
@@ -584,6 +469,19 @@
         </div> <!-- end of container -->
     </div> <!-- end of slider-2 -->
     <!-- end of testimonials -->
+
+    <div id="google-photos" class="google-photos-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="above-heading">Customer Photos</div>
+                    <h2 class="h2-heading">Public photos from the Capri Rent A Scooter Google listing</h2>
+                    <p class="p-heading">A selection of public photos shared by customers on Google.</p>
+                    <div id="google-photos-gallery" class="google-photos-grid"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
         <!-- maps -->
         <div id="mapss" class="basic-3">
@@ -663,10 +561,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <img id="image-contan" class="img-fluid" src="" alt="alternative">
                     <div class="footer-col first">
                         <h4>About Caprirentascooter</h4>
-                        <p class="p-small">We're passionate about motorcycle and love</p>
+                        <p class="p-small">We're passionate about Motorcycle and E-bike</p>
                     </div>
                 </div> <!-- end of col -->
                 <div class="col-md-4">
@@ -675,12 +572,13 @@
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
                                 <i class="fas fa-square"></i>
-                                <div class="media-body">Our business partners <a class="white" href="#your-link">startupguide.com</a></div>
+                                <div class="media-body">Capri <a class="white" href="https://www.cittadicapri.it/">cittadicapri.it</a></div>
                             </li>
-                            <li class="media">
+                           <!-- <li class="media">
                                 <i class="fas fa-square"></i>
                                 <div class="media-body">Read our <a class="white" href="terms-conditions.html">Terms & Conditions</a>, <a class="white" href="privacy-policy.html">Privacy Policy</a></div>
                             </li>
+                            -->
                         </ul>
                     </div>
                 </div> <!-- end of col -->
@@ -690,7 +588,7 @@
                         <ul class="list-unstyled li-space-lg p-small">
                             <li class="media">
                                 <i class="fas fa-map-marker-alt"></i>
-                                <div class="media-body">22 Innovative, Anacapri, NA 80073, IT</div>
+                                <div class="media-body">Via Catena 15, 80071 (NA) Anacapri, IT</div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-envelope"></i>
@@ -710,9 +608,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © 2024 caprirentascooter <br>
-                        Distributed By <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
-                    </p>
+                    <p class="p-small">Copyright © 2024 caprirentascooter </p>
+                <!--      <p class="p-Vsmall">Inovatik & <a href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
+                    </p>-->
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
@@ -731,316 +629,8 @@
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
     <script async src="https://js.stripe.com/v3/buy-button.js"> </script>
-    <script>
-        (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({
-          key: "AIzaSyBU8ZGzVNM00GCy4QBdLt-rnOlkFo8hPa4",
-          v: "weekly",
-          // Use the 'v' parameter to indicate the version to use (weekly, beta, alpha, etc.).
-          // Add other bootstrap parameters as needed, using camel case.
-        });
-      </script>
-   
-      <script>
-        // Initialize and add the map
-let map;
 
-async function initMap() {
-  // The location of caprirentscooter 40.55022724510268, 14.239252679514344
-  const position = { lat: 40.55, lng: 14.23 };
-  const myPosition = { lat: 40.553380824954644,  lng: 14.219324085926518 };
-
-  // Request needed libraries.
-  const { Map , InfoWindow } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement , PinElement } = await google.maps.importLibrary("marker");
-
-  //libreria per i commenti
-  const {Place} = await google.maps.importLibrary("places");
-
-  // Use a place ID to create a new Place instance.
-const place = new Place({
-  id: "ChIJoSU3AdV5OxMRtuRaWPW3-38", // caprirentscooter capri
-});
-
-// Call fetchFields, passing 'reviews' and other needed fields.
-await place.fetchFields({
-  fields: ["displayName", "formattedAddress", "location", "reviews","photos"],
-}).then((place) => {
-    console.log(place)
-  console.log(place.place.Eg.displayName);
-  console.log(place.place.Eg.formattedAddress);
-  console.log(place.place.Eg.location);
-  console.log(place.place.Eg.reviews);
-
- 
-  place.place.Eg.reviews.forEach(( { authorAttribution, rating , text, publishTime,relativePublishTimeDescription},review) => {
-    console.log(` Commento:${text}.\n - ${authorAttribution.displayName}`);
-  //console.log(review);
-
-    let tempEl=document.getElementById('slide-comments');
-    //slide-comments
-   // Format the review using HTML.
-
-   /*
-   tempEl.innerHTML += `
-                    <div class="swiper-slide" data-swiper-slide-index="${cont}">
-                        <div class="image-wrapper">
-                                <img class="img-fluid" src="${authorAttribution.photoURI}" alt="alternative">
-                        </div>
-                                <div class="text-wrapper">
-                                    <div class="testimonial-text">${text}</div>
-                                    <div class="testimonial-author">${authorAttribution.displayName} - </div>
-                                </div> 
-                    </div> 
-           `;*/
-
-    // Create the swiper-slide div
-    const swiperSlide = document.createElement('div');
-    swiperSlide.className = 'swiper-slide';
-    //swiperSlide.setAttribute('data-swiper-slide-index', cont);
-
-    // Create the image-wrapper div
-    const imageWrapper = document.createElement('div');
-    imageWrapper.className = 'image-wrapper';
-
-    // Create the img element
-    const img = document.createElement('img');
-    img.className = 'img-fluid';
-    img.src = authorAttribution.photoURI;
-    img.alt = 'alternative';
-
-    // Append img to image-wrapper
-    imageWrapper.appendChild(img);
-
-    // Create the text-wrapper div
-    const textWrapper = document.createElement('div');
-    textWrapper.className = 'text-wrapper';
-
-    // Create the testimonial-text div
-    const testimonialText = document.createElement('div');
-    testimonialText.className = 'testimonial-text';
-    testimonialText.textContent = text;
-
-    // Create the testimonial-author div
-    const testimonialAuthor = document.createElement('div');
-    testimonialAuthor.className = 'testimonial-author';
-    testimonialAuthor.textContent = `${authorAttribution.displayName} - ${relativePublishTimeDescription}`;
-
-    //relativePublishTimeDescription
-       // Create the star image element
-       const starImg = document.createElement('img');
-    starImg.className = 'img-star';
-    starImg.src = `images/star${rating}.gif`;
-
-
-    // Append testimonial-text and testimonial-author to text-wrapper
-    textWrapper.appendChild(testimonialText);
-    textWrapper.appendChild(testimonialAuthor);
-    textWrapper.appendChild(starImg);
-
-    // Append image-wrapper and text-wrapper to swiper-slide
-    swiperSlide.appendChild(imageWrapper);
-    swiperSlide.appendChild(textWrapper);
-
-    // Append swiper-slide to tempEl
-    tempEl.appendChild(swiperSlide);
-        })
-}).catch((error) => {
-  console.error(error);
-});
-
-const photoImg = document.getElementById('image-contan');
-//funzione x ricevere url della foto...altrimenti da errore di permesso
-let iii=Math.floor(Math.random() * 10) + 1;
-
-//click - change img src
-let cont=1;
-photoImg.addEventListener("click", (i) => {
-    document.getElementById('image-contan').src = place.photos[cont++].getURI({maxHeight: 300});
-  });
-  photoImg.src = place.photos[iii].getURI({maxHeight: 300});
-
-  //google.maps.places.Pl
-  // A marker with a with a URL pointing to a PNG.
-    const beachFlagImg = document.createElement('img');
-    beachFlagImg.src = 'images/logo2(19).gif';
-    beachFlagImg.style ="height:15px"
-
-  // stop parcheggio x capri
-    const parkFlagImg = document.createElement('img');
-    parkFlagImg.src = 'https://gesem-gestione-servizi-municipali-nord-milano-api.municipiumapp.it/s3/8167/media/1200px-italian_traffic_signs_-_parcheggio-svg.png';
-    parkFlagImg.style ="height:20px"
-    //40.54995936153687, 14.238682053135248
-
-  // The map -  init the map
-  map = new Map(document.getElementById("map"), {
-    zoom: 13,
-    center: position,
-    mapId: "19987a45305b8346",//5e8eda199dbda90b
-  });
-  const parkFlagMarkerView = new AdvancedMarkerElement({
-    map,
-    position: { lat: 40.54995936153687, lng: 14.238682053135248 },
-    content: parkFlagImg,
-    title: 'Parcheggio per Capri',
-  });
-
-  const beachFlagMarkerView = new AdvancedMarkerElement({
-    map,
-    position: { lat: 40.553380824954644, lng: 14.219324085926518 },
-    content: beachFlagImg,
-    title: 'A marker using a custom PNG Image',
-  });
-
-  // i vari punti di interesse della mappa
-const tourStops = [
-    {
-      position: { lat: 40.56122888850998, lng: 14.205595497908048 },
-      title: "Grotta Azzurra",
-    },
-    {
-      position: { lat: 40.536522969676426,  lng: 14.198788587276004, },
-      title: "Faro di Punta Carena",
-    },
-    {
-      position: { lat: 40.54252733958242, lng: 14.200575970817543, },
-      title: "Sentiero dei Fortini",
-    },
-    {
-      position: { lat: 40.55713191542387,  lng: 14.201904486685299, },
-      title: "Damecuta",
-    },
-    {
-      position: { lat: 40.54029587376164, lng: 14.209354073849937, },
-      title: "Belvedere della Migliara",
-    },
-    {
-      position: { lat: 40.55662329394343,  lng: 14.228261429421096, },
-      title: "Scala fenicia",
-    },
-
-  ];
-  //fine punti interess
- // Create an info window to share between markers.
- const infoWindow = new InfoWindow();
-
-// Create the markers.
-tourStops.forEach(({ position, title }, i) => {
-  const pin = new PinElement({
-    glyph: `${i + 1}`,
-    scale: 1,
-  });
-  const marker = new AdvancedMarkerElement({
-    position,
-    map,
-    title: `${i + 1}. ${title}`,
-    content: pin.element,
-    gmpClickable: true,
-  });
-
-  // Add a click listener for each marker, and set up the info window.
-  marker.addListener("click", ({ domEvent, latLng }) => {
-    const { target } = domEvent;
-
-    infoWindow.close();
-    infoWindow.setContent(marker.title);
-    infoWindow.open(marker.map, marker);
-  });
-
-});
-
-//////////////////////           GEOLOCATION
-//locationButton
-const locationButton = document.createElement("Button");
-
-  //img logo posizione
-  const flagImg = document.createElement('img');
-    flagImg.src = 'images/flag.gif';
-    flagImg.style ="height:20px"
-    /*
-    const pin = new PinElement({
-    glyph: `${i + 1}`,
-    scale: 1,
-  });
-  const marker = new AdvancedMarkerElement({
-    position,
-    map,
-    title: `${i + 1}. ${title}`,
-    content: pin.element,
-    gmpClickable: true,
-  });*/
-
-  locationButton.textContent = "Current Location";
-  locationButton.classList.add("custom-map-control-button");
-
-  map.controls[google.maps.ControlPosition.TOP_CENTER].push(locationButton);
-  locationButton.addEventListener("click", () => {
-    
-    // Try HTML5 geolocation.
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          };
-          console.log(pos)
-
-
- const beachFlagMarkerView = new AdvancedMarkerElement({
-    map,
-    position: pos,
-    content: flagImg,
-    title: 'A marker using a custom PNG Image',
-  });
-
-  /*
-          infoWindow.setPosition(pos);
-          infoWindow.setContent("Location found.");
-          infoWindow.open(map);
-          */
-          map.setCenter(pos);
-        },
-        () => {
-          handleLocationError(true, infoWindow, map.getCenter());
-        },
-      );
-    } else {
-      // Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
-    }
-  });
-  
-}
-
-initMap();
-      </script>
-
-      <script>
-        let i=0;
-        document.addEventListener('DOMContentLoaded', function() {
-    const imgElement = document.getElementById('imagelogo');
-    imgElement.addEventListener('click', function() {
-        imgElement.src = `images/logo2(${i}).gif`; 
-        i++// Change this to the new image URL
-    });
-});
-
-
-//                <i id="cellular" class="fas fa-phone"></i>   
-//             <i id="wazap" class="fab fa-whatsapp"></i></i> 
-document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(function() {
-            // Set phone and WhatsApp links
-            const phoneNumber = '+393283771217';
-            const whatsappNumber = '+393283771217';
-
-            const phoneLink = document.getElementById('phoneLink');
-            phoneLink.href = `tel:${phoneNumber}`;
-
-            const whatsappLink = document.getElementById('whatsappLink');
-            whatsappLink.href = `https://wa.me/${whatsappNumber}`;
-        }, 2000); // 2000 milliseconds = 2 seconds
-    });
-      </script>
+    <script src="js/gogl.js"></script> <!-- mio scripts -->
+   <script src="js/cavallino.js"></script> <!-- mio scripts -->
 </body>
 </html>

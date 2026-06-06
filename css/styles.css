@@ -329,6 +329,7 @@ select {
     background-position: 96% 50%;
     background-repeat: no-repeat;
     outline: none;
+	width: 95px;
 }
 
 select::-ms-expand {
@@ -1362,6 +1363,49 @@ input[type='checkbox'] {
 	background-size: 1.125rem 1.75rem;
 }
 
+.google-photos-section {
+	padding: 2rem 0 4rem;
+	background: linear-gradient(180deg, #ffffff 0%, #f3f7fd 100%);
+}
+
+.google-photos-section .h2-heading,
+.google-photos-section .p-heading,
+.google-photos-section .above-heading {
+	text-align: center;
+}
+
+.google-photos-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	gap: 1rem;
+	margin-top: 2rem;
+}
+
+.google-photo-card {
+	display: block;
+	overflow: hidden;
+	border-radius: 0.75rem;
+	background-color: #fff;
+	box-shadow: 0 0.75rem 2rem rgba(0, 0, 0, 0.08);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.google-photo-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.12);
+}
+
+.google-photo-card img {
+	display: block;
+	width: 100%;
+	height: 220px;
+	object-fit: cover;
+}
+
+.google-photos-section.is-hidden {
+	display: none;
+}
+
 
 /**************************/
 /*     13. Newsletter     */
@@ -2318,6 +2362,20 @@ form#newsletterForm {
 		position: absolute;
 	}
   }
+  @media (max-width: 450px) {
+	.label-control-right {
+		top: 0.4rem;
+		left: 13rem;
+		position: absolute;
+	}
+  }
+  @media (max-width: 380px) {
+	.label-control-right {
+		top: 0.4rem;
+		left: 12rem;
+		position: absolute;
+	}
+  }
   @media (min-width: 526px) {
 	.label-control-right {
 		position: absolute;
@@ -2370,4 +2428,31 @@ iframe {
 	.deskPhone {
 		display: block;
 	}
+}
+
+#videoElement {
+	position: relative;
+}
+#watermark {
+    position: absolute;
+    transform: translate(-50%, -100%);
+    top: 65%;
+    left: 50%;
+    color: white;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+}
+
+
+.p-Vsmall{
+	font-size: 8px;
+}
+
+.p-Vsmall a{
+	text-decoration: none;
+}
+video#videoElement {
+    width: 80%;
+    max-width: 500px;
 }
