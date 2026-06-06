@@ -22,8 +22,6 @@
         const photosSection = document.getElementById('google-photos');
         const photosGallery = document.getElementById('google-photos-gallery');
 
-        const resolvePlaceData = (response) => response.place || response;
-
         const buildPhotoUri = (photo, options) => {
           if (!photo) {
             return '';
@@ -82,21 +80,16 @@
         // Call fetchFields, passing 'reviews' and other needed fields.
         await place.fetchFields({
           fields: ["displayName", "formattedAddress", "location", "reviews","photos"],
-        }).then((placeResponse) => {
-          const placeData = resolvePlaceData(placeResponse);
-          const reviews = placeData.reviews || placeData.Eg?.reviews || [];
-          const photos = placeData.photos || placeData.Eg?.photos || [];
+        });
+
+        try {
+          const placeData = place;
+          const reviews = Array.isArray(placeData.reviews) ? placeData.reviews : [];
+          const photos = Array.isArray(placeData.photos) ? placeData.photos : [];
 
           renderPlacePhotos(photos);
 
-          /*  console.log(place)
-          console.log(place.place.Eg.displayName);
-          console.log(place.place.Eg.formattedAddress);
-          console.log(place.place.Eg.location);
-          console.log(place.place.Eg.reviews);
-        */
-         
-            reviews.forEach(( { authorAttribution, rating , text, publishTime,relativePublishTimeDescription},review) => {
+          reviews.forEach(( { authorAttribution, rating , text, publishTime,relativePublishTimeDescription},review) => {
           //  console.log(` Commento:${text}.\n - ${authorAttribution.displayName}`);
           //console.log(review);
         
@@ -167,13 +160,13 @@
         
             // Append swiper-slide to tempEl
             tempEl.appendChild(swiperSlide);
-                })
-        }).catch((error) => {
+          })
+        } catch (error) {
           if (photosSection) {
             photosSection.classList.add('is-hidden');
           }
           console.error(error);
-        });
+        }
         
         /*
         const photoImg = document.getElementById('image-contan');
