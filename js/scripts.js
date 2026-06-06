@@ -51,52 +51,71 @@
     
     const slider= ( ) =>{
     /* Image Slider - Swiper */
-    var imageSlider = new Swiper('.image-slider', {
-        autoplay: {
-            delay: 2000,
-            disableOnInteraction: false
-		},
-        loop: true,
-        spaceBetween: 30,
-        slidesPerView: 5,
-		breakpoints: {
-            // when window is <= 580px
-            580: {
-                slidesPerView: 1,
-                spaceBetween: 10
-            },
-            // when window is <= 768px
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 20
-            },
-            // when window is <= 992px
-            992: {
-                slidesPerView: 3,
-                spaceBetween: 20
-            },
-            // when window is <= 1200px
-            1200: {
-                slidesPerView: 4,
-                spaceBetween: 20
-            },
+    if (document.querySelector('.image-slider')) {
+        var imageSlider = new Swiper('.image-slider', {
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false
+			},
+            loop: true,
+            spaceBetween: 30,
+            slidesPerView: 5,
+			breakpoints: {
+                // when window is <= 580px
+                580: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                // when window is <= 768px
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20
+                },
+                // when window is <= 992px
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                // when window is <= 1200px
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 20
+                },
 
-        }
-    });
+            }
+        });
+    }
 
 
-    /* Text Slider - Swiper */
-	var textSlider = new Swiper('.text-slider', {
-        autoplay: {
-            delay: 10000,
-            disableOnInteraction: false
-		},
-        loop: true,
-        navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev'
-		}
-    });
+    if (document.querySelector('.customer-photo-slider')) {
+		var customerPhotoSlider = new Swiper('.customer-photo-slider', {
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false
+			},
+            loop: true,
+            spaceBetween: 24,
+            slidesPerView: 3,
+            navigation: {
+				nextEl: '.customer-photo-button-next',
+				prevEl: '.customer-photo-button-prev'
+			},
+			breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 12
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 18
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 24
+                }
+            }
+        });
+    }
 } // end script
 setTimeout(function() {
     slider()
@@ -132,6 +151,17 @@ setTimeout(function() {
                 }
             }
         }
+    });
+
+    $('.customer-photo-slider').magnificPopup({
+        delegate: 'a.customer-photo-link',
+        type: 'image',
+        gallery: {
+            enabled: true
+        },
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        fixedContentPos: false
     });
 
 
